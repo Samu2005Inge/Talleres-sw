@@ -1,0 +1,34 @@
+<div class="container mt-3">
+  <div class="row">
+      <div class="col-6 mx-auto">
+          <table class="table table-light" id="tabla-datos">
+              <thead class="table-light" style="background-color: white; color: black;">
+                  <tr>
+                      <th>#</th>
+                      <th>Name</th>
+                      <th>Channel</th>
+                      <th>Seasons</th>
+                  </tr>
+              </thead>
+              <tbody id="series">
+                <tr *ngFor="let c of series" style="background-color: lightgrey;">
+                    <th>
+                      <dd class="tabla-datos">{{c.id}}</dd>
+                    </th>
+                    <td class="text-primary">
+                      <dd>{{c.name}}</dd>
+                    </td>
+                    <td>
+                      <dd>{{c.channel}}</dd>
+                    </td>
+                    <td>
+                        <dd>{{c.seasons}}</dd>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+
+          <p id="average">Promedio de temporadas: {{promedio}}</p>
+      </div>
+
+</div>
